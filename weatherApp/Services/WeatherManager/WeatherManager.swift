@@ -24,8 +24,8 @@ final class WeatherManager: ObservableObject, WeatherManagerProtocol {
     
     func loadWeather(for city: String) async throws {
         do {
-            if let loadedWeather = try await weatherService.loadWeather(for: city) {
-                self.weatherData = loadedWeather
+            if let loadedWeatherData = try await weatherService.loadWeather(for: city) {
+                self.weatherData = loadedWeatherData
             }
         } catch {
             throw WeatherManagerError.weatherLoadingError

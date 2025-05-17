@@ -13,4 +13,12 @@ struct Location: Codable, Sendable {
     let country: String
     let lat: Double
     let lon: Double
+    
+    static let mockLocation: Location = .init(
+        name: "Moscow",
+        region: "Moscow City",
+        country: "Russia",
+        lat: 55.7522,
+        lon: 37.6156
+    )
 }

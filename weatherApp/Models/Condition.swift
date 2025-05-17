@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Condition: Codable, Sendable {
+struct Condition: Codable, Sendable, Hashable {
     let text: String
     let icon: String
 }

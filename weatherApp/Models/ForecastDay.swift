@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ForecastDay: Codable, Sendable {
+struct ForecastDay: Codable, Sendable, Hashable {
     let date: String
     let day: DayForecast
     

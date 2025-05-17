@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DayForecast: Codable, Sendable {
+struct DayForecast: Codable, Sendable, Hashable {
     let avgtempC: Double
     let maxwindKph: Double
     let avghumidity: Int
@@ -19,4 +19,25 @@ struct DayForecast: Codable, Sendable {
         case avghumidity
         case condition
     }
+    
+    static let mockData: [DayForecast] = [
+        .init(
+            avgtempC: 17.8,
+            maxwindKph: 18.4,
+            avghumidity: 55,
+            condition: Condition(
+                text: "Sunny",
+                icon: "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            )
+        ),
+        .init(
+            avgtempC: 18.2,
+            maxwindKph: 10.8,
+            avghumidity: 70,
+            condition: Condition(
+                text: "Partly Cloudy",
+                icon: "//cdn.weatherapi.com/weather/64x64/night/116.png"
+            )
+        )
+    ]
 }

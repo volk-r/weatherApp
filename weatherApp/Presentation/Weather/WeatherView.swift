@@ -45,10 +45,17 @@ struct WeatherView: View {
             }
         }
         .background{
-            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.3), Color.purple.opacity(0.2)]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
+            LinearGradient(
+                gradient: Gradient(
+                    colors: [
+                        Color.blue.opacity(0.3),
+                        Color.purple.opacity(0.2)
+                    ]
+                ),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
         }
         .task {
             try? await weatherManager.loadWeather(for: "moscow")

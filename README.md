@@ -1,6 +1,6 @@
 # WeatherApp
 
-WeatherApp - это приложение для показа прогноза погоды для выбранного тобой города.
+WeatherApp - это приложение для показа прогноза погоды для выбранного города.
 
 https://github.com/user-attachments/assets/a631ee3a-938b-4e46-a00d-fccc16f35b2a
 

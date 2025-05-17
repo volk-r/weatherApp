@@ -25,7 +25,8 @@ struct WeatherView: View {
     var body: some View {
         VStack(alignment: .leading) {
             if viewModel.forecast.isEmpty {
-                ProgressView()
+                AnimatedWeatherIconsView()
+                    .ignoresSafeArea()
             } else {
                 header
                     .padding(.horizontal)

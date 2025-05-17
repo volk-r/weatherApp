@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "compression-type" : "lossy",
       "filename" : "icon.png",
       "idiom" : "universal"
     }

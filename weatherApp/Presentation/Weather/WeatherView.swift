@@ -31,15 +31,24 @@ struct WeatherView: View {
                     .padding(.horizontal)
                 
                 List(viewModel.forecast, id: \.self) { forecastDay in
-                    Text(forecastDay.date)
-                    WeatherCardView(weatherDay: forecastDay.day)
-                    .listRowSeparator(.hidden)
+                    Group {
+                        Text(forecastDay.date)
+                        WeatherCardView(weatherDay: forecastDay.day)
+                            .listRowSeparator(.hidden)
+                    }
+                    .listRowBackground(Color.clear)
                 }
-                .listStyle(.inset)
+                .listStyle(.plain)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 
                 Spacer()
             }
+        }
+        .background{
+            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.3), Color.purple.opacity(0.2)]),
+                           startPoint: .topLeading,
+                           endPoint: .bottomTrailing)
+                .edgesIgnoringSafeArea(.all)
         }
         .task {
             try? await weatherManager.loadWeather(for: "moscow")

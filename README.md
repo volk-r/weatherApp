@@ -2,7 +2,7 @@
 
 WeatherApp - это приложение для показа прогноза погоды для выбранного города.
 
-https://github.com/user-attachments/assets/a631ee3a-938b-4e46-a00d-fccc16f35b2a
+https://github.com/user-attachments/assets/80b7a18a-a45b-4f10-9802-ba4c80c82958
 
 ## Описание приложения
 

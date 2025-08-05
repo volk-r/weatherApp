@@ -24,7 +24,7 @@ https://api.weatherapi.com/v1/forecast.json
 
 Пример использования запроса для Москвы для получения прогноза на 5 дней:
 
-https://api.weatherapi.com/v1/forecast.json?q=moscow&days=5&key=YOUR_API_KE
+https://api.weatherapi.com/v1/forecast.json?q=moscow&days=5&key=YOUR_API_KEY
 
 ## Технические требования
 
